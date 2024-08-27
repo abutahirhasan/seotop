@@ -1,0 +1,67 @@
+//Banner Style
+.banner-section {
+	padding: 140px 0;
+	.hero-content-version1 {
+		.cmn-tag {
+			margin-bottom: 20px;
+		}
+		h1 {
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 20px;
+			margin-bottom: 40px;
+			line-height: 30px;
+		}
+	}
+	.hero-thumb1 {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	@include breakpoint(max-xxl) {
+		.hero-content-version1 {
+			.cmn-tag {
+				margin-bottom: 18px;
+			}
+			h1 {
+				margin-bottom: 17px;
+			}
+			p {
+				font-size: 20px;
+				margin-bottom: 30px;
+				line-height: 30px;
+			}
+		}
+	}
+	@include breakpoint(max-lg) {
+		.hero-thumb1 {
+			width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include breakpoint(max-md) {
+		.hero-content-version1 {
+			.cmn-tag {
+				margin-bottom: 18px;
+			}
+			h1 {
+				margin-bottom: 14px;
+			}
+			p {
+				font-size: 16px;
+				margin-bottom: 24px;
+				line-height: 28px;
+			}
+		}
+        .hero-thumb1{
+            padding: 10px;
+        }
+	}
+}
+//Banner Style
