@@ -180,59 +180,60 @@ span {
 // Custom Container
 
 // Section Hidden
-section,footer{
+section,
+footer {
 	overflow: hidden;
 }
 // Section Hidden
 
 .p1-clr {
-	color: var(--p1-clr);
+	color: var(--p1-clr) !important;
 }
 .p1-bg {
-	background: var(--p1-clr);
+	background: var(--p1-clr) !important;
 }
 .p2-clr {
-	color: var(--p2-clr);
+	color: var(--p2-clr) !important;
 }
 .p2-bg {
-	background: var(--p2-clr);
+	background: var(--p2-clr) !important;
 }
 .p3-clr {
-	color: var(--p3-clr);
+	color: var(--p3-clr) !important;
 }
 .p3-bg {
-	background: var(--p3-clr);
+	background: var(--p3-clr) !important;
 }
 .p4-clr {
-	color: var(--p4-clr);
+	color: var(--p4-clr) !important;
 }
 .p4-bg {
-	background: var(--p4-clr);
+	background: var(--p4-clr) !important;
 }
 .p5-clr {
-	color: var(--p5-clr);
+	color: var(--p5-clr) !important;
 }
 .p5-bg {
-	background: var(--p5-clr);
+	background: var(--p5-clr) !important;
 }
 .cmn-bg {
 	background: var(--cmnbg);
 }
-.n100-clr{
+.n100-clr {
 	color: var(--n100-clr);
 }
-.n200-clr{
+.n200-clr {
 	color: var(--n200-clr);
 }
-.n700-clr{
+.n700-clr {
 	color: var(--n700-clr);
 }
-.n800-clr{
+.n800-clr {
 	color: var(--n800-clr);
 }
 
-//radius 
-.rounded100{
+//radius
+.rounded100 {
 	border-radius: 100px;
 }
 
@@ -250,7 +251,7 @@ section,footer{
 .black {
 	color: $black;
 }
-.blackbg{
+.blackbg {
 	background: $black;
 }
 .white {
@@ -267,6 +268,9 @@ section,footer{
 }
 .pra {
 	color: $pra;
+}
+.pra2 {
+	color: $pra2 !important;
 }
 .text {
 	color: $text;

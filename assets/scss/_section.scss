@@ -2,27 +2,16 @@
 
 .section-title {
 	position: relative;
-	z-index: 99;
-	margin-bottom: 30px;
-	margin-top: -5px;
-
-	@include breakpoint(max-md) {
-		margin-bottom: 0;
-	}
-
-	span {
-		color: $p2-clr;
+	.cmn-tag {
 		margin-bottom: 10px;
-		display: inline-block;
-		font-weight: 400;
-		text-transform: capitalize;
-		font-size: 20px;
-		font-family: "Pangolin";
+	}
+	h2 {
+		font-weight: 500;
 	}
 }
 
 .section-title-area {
-	@include flex;
+	display: flex;
 	justify-content: space-between;
 	position: relative;
 	z-index: 9;
@@ -33,6 +22,16 @@
 	}
 }
 
+//gsap animation
+.reveal-left,
+.reveal-bottom {
+	visibility: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
 //>>>>> Section Title End <<<<<//
 
 //>>>>> Basic Css Start <<<<<//
@@ -40,6 +39,18 @@
 .center {
 	text-align: center;
 	margin: 0 auto;
+}
+.mb-60 {
+	margin-bottom: 60px;
+	@include breakpoint(max-xxl) {
+		margin-bottom: 50px;
+	}
+	@include breakpoint(max-xl) {
+		margin-bottom: 40px;
+	}
+	@include breakpoint(max-lg) {
+		margin-bottom: 30px;
+	}
 }
 
 .section-bg {

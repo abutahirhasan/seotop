@@ -772,6 +772,59 @@ CSS TABLE OF CONTENTS
 			});
 		});
 
+		// Blur animation
+		// gsap.utils.toArray(".section-blur").forEach(function (section) {
+		// 	gsap.set(section, { filter: "blur(20px)" });
+		// 	gsap.to(section, {
+		// 		filter: "blur(0px)",
+		// 		scrollTrigger: {
+		// 			trigger: section,
+		// 			start: "top bottom",
+		// 			end: "top center",
+		// 			scrub: true,
+		// 		},
+		// 	});
+		// });
+
+		// Image reveal animation
+
+		function revealAnimation(selector, axis, percent, scale) {
+			gsap.utils.toArray(selector).forEach(function (revealItem) {
+				// Check if the revealItem contains an image
+				var image = revealItem.querySelector("img");
+				if (!image) {
+					console.warn("No image found in", revealItem);
+					return;
+				}
+
+				var tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: revealItem,
+						toggleActions: "play none none reverse",
+					},
+				});
+
+				// Set initial state
+				tl.set(revealItem, { autoAlpha: 1 })
+					.from(revealItem, {
+						duration: 1.5, // Specify duration directly
+						[axis + "Percent"]: -percent, // Use axis + "Percent" for dynamic property names
+						ease: "power2.out", // Use string for ease function
+					})
+					.from(image, {
+						duration: 1.5, // Specify duration directly
+						[axis + "Percent"]: percent, // Use axis + "Percent" for dynamic property names
+						scale: scale,
+						delay: -1.5, // Delay for image animation
+						ease: "power2.out", // Use string for ease function
+					});
+			});
+		}
+
+		// Call the function with your selectors
+		revealAnimation(".reveal-left", "x", 100, 1.3);
+		revealAnimation(".reveal-bottom", "y", 100, 1.3);
+
 		// End Document Ready Function
 	});
 

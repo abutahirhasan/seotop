@@ -1,0 +1,58 @@
+//Blog Nesw
+.news-single-items {
+	position: relative;
+	.news-image {
+		width: 100%;
+        margin-bottom: 30px;
+		img {
+			width: 100%;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+	}
+	.news-content {
+		.cmn-tag {
+			padding: 5px 20px 5px;
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+		h4 {
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 18px;
+			color: $pra;
+			margin-bottom: 24px;
+			line-height: 30px;
+		}
+	}
+	&.style1 {
+		padding: 0 30px 40px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+        z-index: 1;
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			content: "";
+			height: 404px;
+			background: $blogbox;
+			z-index: -1;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+	}
+    &:hover{
+       .news-content{
+            h4{
+                a{
+                    color: $p1-clr;
+                }
+            }
+       }
+    }
+}
+//Blog Nesw

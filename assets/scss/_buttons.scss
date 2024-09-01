@@ -87,5 +87,19 @@
 		padding: 8px 22px;
 	}
 }
-
+.read-more{
+	font-size: 18px;
+	font-weight: 600;
+	color: $black;
+	gap: 14px;
+	i{
+		transition: all 0.4s;
+	}
+	&:hover{
+		color: $p1-clr;
+		i{
+			padding-left: 10px;
+		}
+	}
+}
 //>>>>> Component Button End <<<<<//
