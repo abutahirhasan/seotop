@@ -3,7 +3,7 @@
 	position: relative;
 	.news-image {
 		width: 100%;
-        margin-bottom: 30px;
+		margin-bottom: 30px;
 		img {
 			width: 100%;
 			border-top-left-radius: 10px;
@@ -31,7 +31,7 @@
 		padding: 0 30px 40px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
-        z-index: 1;
+		z-index: 1;
 		&::before {
 			position: absolute;
 			bottom: 0;
@@ -45,14 +45,34 @@
 			border-bottom-right-radius: 20px;
 		}
 	}
-    &:hover{
-       .news-content{
-            h4{
-                a{
-                    color: $p1-clr;
-                }
-            }
-       }
-    }
+	&:hover {
+		.news-content {
+			h4 {
+				a {
+					color: $p1-clr;
+				}
+			}
+		}
+	}
+	@include breakpoint(max-lg) {
+		&.style1{
+			padding: 0 24px 20px;
+		}
+		.news-content {
+			.cmn-tag {
+				padding: 5px 10px 5px;
+				font-size: 16px;
+				margin-bottom: 18px;
+			}
+			h4 {
+				margin-bottom: 8px;
+			}
+			p {
+				font-size: 16px;
+				margin-bottom: 20px;
+				line-height: 28px;
+			}
+		}
+	}
 }
 //Blog Nesw
