@@ -1,0 +1,46 @@
+//service
+.service-items {
+	padding: 60px;
+	border-radius: 20px;
+	background: $blogbox;
+	position: relative;
+	transition: all 0.4s;
+	.icon {
+		margin-bottom: 120px;
+		transition: all 0.5s;
+	}
+	.content {
+		p {
+			margin-bottom: 40px;
+		}
+		.common-btn {
+			border: 1px solid $p1-clr;
+			&:hover {
+				border-color: $p3-clr;
+			}
+		}
+	}
+	.badge {
+		color: #0c0c0e;
+		font-family: Rubik;
+		font-size: 80px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 100%;
+        opacity: 0.05;
+        position: absolute;
+        right: 0;
+        top: 0;
+	}
+	&:hover {
+		.common-btn {
+			border: 1px solid $p1-clr;
+			border-color: $p1-clr;
+			background: $p1-clr;
+			color: $white;
+		}
+		.icon {
+			transform: scale(0.9);
+		}
+	}
+}

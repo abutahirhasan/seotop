@@ -455,6 +455,23 @@ footer {
   color: var(--text);
 }
 
+.about-thumb {
+  animation: updown 2s linear infinite;
+}
+@media (max-width: 1399px) {
+  .about-thumb {
+    max-width: 600px;
+  }
+  .about-thumb img {
+    width: 100%;
+  }
+}
+
+@keyframes updown {
+  50% {
+    transform: translateY(-15px);
+  }
+}
 .faq-section {
   position: relative;
   z-index: 1;
@@ -1018,6 +1035,56 @@ footer {
 .brand-wrapper .swiper-slide.swiper-slide-active .brand-image {
   filter: initial;
   opacity: 1;
+}
+
+.category-wrappe {
+  display: grid;
+  position: relative;
+  z-index: 1;
+  grid-template-columns: repeat(4, 1fr);
+}
+.category-wrappe::before {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: var(--pra2);
+  content: "";
+  z-index: -1;
+}
+.category-wrappe .category-item .icon {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+}
+.category-wrappe .category-item:hover .icon {
+  transform: scale(0.9);
+}
+@media (max-width: 991px) {
+  .category-wrappe {
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .category-wrappe::before {
+    display: none;
+  }
+  .category-wrappe .category-item .icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+  }
+  .category-wrappe .category-item .icon img {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .category-wrappe {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 28px;
+  }
 }
 
 .faq-left .nav {
@@ -3130,7 +3197,7 @@ input.main-search-input::placeholder {
 }
 .pricing-items.premium {
   background: var(--p1-clr);
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 .pricing-items.premium .pricing-head {
   background: var(--white);
@@ -3247,6 +3314,48 @@ input.main-search-input::placeholder {
   .space-bottom {
     padding-bottom: 80px;
   }
+}
+
+.service-items {
+  padding: 60px;
+  border-radius: 20px;
+  background: var(--blogbox);
+  position: relative;
+  transition: all 0.4s;
+}
+.service-items .icon {
+  margin-bottom: 120px;
+  transition: all 0.5s;
+}
+.service-items .content p {
+  margin-bottom: 40px;
+}
+.service-items .content .common-btn {
+  border: 1px solid var(--p1-clr);
+}
+.service-items .content .common-btn:hover {
+  border-color: var(--p3-clr);
+}
+.service-items .badge {
+  color: #0c0c0e;
+  font-family: Rubik;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  opacity: 0.05;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.service-items:hover .common-btn {
+  border: 1px solid var(--p1-clr);
+  border-color: var(--p1-clr);
+  background: var(--p1-clr);
+  color: var(--white);
+}
+.service-items:hover .icon {
+  transform: scale(0.9);
 }
 
 .testimonial-items {
