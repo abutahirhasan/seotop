@@ -1,0 +1,28 @@
+//Pricing
+.pricing-items {
+	border-radius: 20px;
+	background: $white;
+    padding: 40px 30px;
+	.pricing-head {
+		border-radius: 20px;
+		background: rgb(32, 109, 255, 0.1);
+		padding: 28px 30px;
+		margin-bottom: 42px;
+	}
+    .pricing-list{
+        gap: 16px;
+    }
+    &.premium{
+        background: $p1-clr;
+        padding-bottom: 50px;
+        .pricing-head{
+            background: $white;
+        }
+        .pricing-list{
+            li{
+                color: $white;
+            }
+        }
+    }
+}
+//Pricing

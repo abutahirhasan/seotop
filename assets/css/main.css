@@ -20,6 +20,7 @@ Version: 1.0.0
   --n200-clr: rgba(221, 221, 221, 1);
   --n700-clr: rgba(36, 36, 38, 1);
   --n800-clr: rgba(49, 49, 49, 1);
+  --n900-clr: #0C0C0E;
   --theme: rgba(32, 109, 255, 1);
   --pra: #313131;
   --pra2: #DDD;
@@ -392,8 +393,16 @@ footer {
   color: var(--n700-clr);
 }
 
+.n700-bg {
+  background: var(--n700-clr);
+}
+
 .n800-clr {
   color: var(--n800-clr);
+}
+
+.n900-clr {
+  color: var(--n900-clr);
 }
 
 .rounded100 {
@@ -3103,6 +3112,31 @@ input.main-search-input::placeholder {
 
 .cursor-outer.cursor-hover {
   opacity: 0;
+}
+
+.pricing-items {
+  border-radius: 20px;
+  background: var(--white);
+  padding: 40px 30px;
+}
+.pricing-items .pricing-head {
+  border-radius: 20px;
+  background: rgba(32, 109, 255, 0.1);
+  padding: 28px 30px;
+  margin-bottom: 42px;
+}
+.pricing-items .pricing-list {
+  gap: 16px;
+}
+.pricing-items.premium {
+  background: var(--p1-clr);
+  padding-bottom: 50px;
+}
+.pricing-items.premium .pricing-head {
+  background: var(--white);
+}
+.pricing-items.premium .pricing-list li {
+  color: var(--white);
 }
 
 .section-title {
