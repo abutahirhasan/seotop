@@ -16,8 +16,8 @@
 		.spinner {
 			animation: spinner 1s infinite linear;
 			border-radius: 50%;
-			border: 3px solid rgba(0, 0, 0, 0.2);
-			border-top-color: $p2-clr;
+			border: 3px solid #ddd;
+			border-top-color: $p1-clr;
 			height: 9em;
 			margin: 0 auto 3.5em auto;
 			width: 9em;
@@ -39,7 +39,7 @@
 			}
 
 			.letters-loading {
-				color: $p2-clr;
+				color: $p1-clr;
 				position: relative;
 
 				&:nth-child(2):before {
@@ -111,7 +111,7 @@
 			padding: 0px;
 
 			.bg {
-				background-color: $bg-color;
+				background-color: $blogbox;
 				height: 100%;
 				left: 0;
 				width: 100%;
