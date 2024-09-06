@@ -24,7 +24,7 @@ CSS TABLE OF CONTENTS
 ------------------------------------------------------------------*/
 
 (function ($) {
-	"use strict";
+	("use strict");
 
 	$(document).ready(function () {
 		//>> Mobile Menu Js Start <<//
@@ -552,6 +552,43 @@ CSS TABLE OF CONTENTS
 
 		// End Document Ready Function
 	});
+
+	// progress-area
+	let progressBars = $(".progress-area");
+	let observer = new IntersectionObserver(function (progressBars) {
+		progressBars.forEach(function (entry, index) {
+			if (entry.isIntersecting) {
+				let width = $(entry.target)
+					.find(".progress-bar")
+					.attr("aria-valuenow");
+				let count = 0;
+				let time = 1000 / width;
+				let progressValue = $(entry.target).find(".progress-value");
+				setInterval(() => {
+					if (count == width) {
+						clearInterval();
+					} else {
+						count += 1;
+						$(progressValue).text(count + "%");
+					}
+				}, time);
+				$(entry.target)
+					.find(".progress-bar")
+					.css({ width: width + "%", transition: "width 1s linear" });
+			} else {
+				$(entry.target)
+					.find(".progress-bar")
+					.css({ width: "0%", transition: "width 1s linear" });
+			}
+		});
+	});
+	progressBars.each(function () {
+		observer.observe(this);
+	});
+	$(window).on("unload", function () {
+		observer.disconnect();
+	});
+	//end
 
 	function loader() {
 		$(window).on("load", function () {

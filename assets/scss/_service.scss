@@ -21,16 +21,10 @@
 		}
 	}
 	.badge {
-		color: #0c0c0e;
-		font-family: Rubik;
-		font-size: 80px;
-		font-style: normal;
-		font-weight: 500;
-		line-height: 100%;
-        opacity: 0.05;
-        position: absolute;
-        right: 0;
-        top: 0;
+		position: absolute;
+		right: 6px;
+		top: 8px;
+		z-index: 1;
 	}
 	&:hover {
 		.common-btn {
@@ -41,6 +35,47 @@
 		}
 		.icon {
 			transform: scale(0.9);
+		}
+	}
+	@include breakpoint(max-xxl) {
+		padding: 34px 30px;
+		.icon {
+			margin-bottom: 80px;
+			width: 80px;
+			img {
+				width: 100%;
+			}
+		}
+		.badge {
+			right: 6px;
+			top: 8px;
+			max-width: 80px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include breakpoint(max-md) {
+		padding: 28px 20px;
+		.icon {
+			margin-bottom: 40px;
+			width: 80px;
+			img {
+				width: 100%;
+			}
+		}
+        .content{
+            p{
+                margin-bottom: 24px;
+            }
+        }
+		.badge {
+			right: 6px;
+			top: 8px;
+			max-width: 60px;
+			img {
+				width: 100%;
+			}
 		}
 	}
 }
