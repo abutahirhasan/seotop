@@ -1,4 +1,13 @@
 //Blog Nesw
+.news-section{
+	z-index: 1;
+	.shape-blog-right{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+	}
+}
 .news-single-items {
 	position: relative;
 	.news-image {
@@ -45,6 +54,30 @@
 			border-bottom-right-radius: 20px;
 		}
 	}
+	//style2
+	&.style2 {
+		border-radius: 20px;
+		border: 1px solid #ddd;
+		background: $white;
+		box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+		transition: all 0.5s;
+		.news-content{
+			padding: 28px;
+			h4{
+				margin-bottom: 30px;
+			}
+		}
+		&:hover{
+			transform: translateY(-8px);
+			.news-content{
+				h4{
+					a{
+						color: $black;
+					}
+				}
+			}
+		}
+	}
 	&:hover {
 		.news-content {
 			h4 {
@@ -55,7 +88,7 @@
 		}
 	}
 	@include breakpoint(max-lg) {
-		&.style1{
+		&.style1 {
 			padding: 0 24px 20px;
 		}
 		.news-content {

@@ -109,34 +109,40 @@
 	gap: 15px;
 
 	.array-prev {
-		width: 61px;
-		height: 56px;
-		line-height: 56px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
 		text-align: center;
-		background-color: $white;
-		color: $header-color;
-		border-radius: 22px;
+		border: 1px solid $p1-clr;
+		color: $p1-clr;
+		border-radius: 50%;
 		@include transition;
+		i{
+			font-size: 20px;
+		}
 
 		&:hover {
-			background-color: $p2-clr;
+			background-color: $p1-clr;
 			color: $white;
 		}
 	}
 
 	.array-next {
-		width: 61px;
-		height: 56px;
-		line-height: 56px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
 		text-align: center;
-		background-color: $p2-clr;
-		color: $white;
-		border-radius: 22px;
+		border: 1px solid $p1-clr;
+		color: $p1-clr;
+		border-radius: 50%;
 		@include transition;
+		i{
+			font-size: 20px;
+		}
 
 		&:hover {
-			background-color: $white;
-			color: $p2-clr;
+			background-color: $p1-clr;
+			color: $white;
 		}
 	}
 }

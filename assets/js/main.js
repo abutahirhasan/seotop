@@ -144,6 +144,10 @@ CSS TABLE OF CONTENTS
 				el: ".dot",
 				clickable: true,
 			},
+			navigation: {
+				nextEl: ".array-prev",
+				prevEl: ".array-next",
+			},
 			breakpoints: {
 				1199: {
 					slidesPerView: 2,
