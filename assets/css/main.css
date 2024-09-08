@@ -1676,7 +1676,7 @@ footer {
 .header-top-section {
   position: relative;
   z-index: 9;
-  background-color: var(--p3-clr);
+  background-color: #ebf3f6;
 }
 .header-top-section .header-top-wrapper {
   display: flex;
@@ -1690,46 +1690,28 @@ footer {
   gap: 40px;
 }
 .header-top-section .header-top-wrapper .contact-list li {
-  color: var(--white);
+  color: var(--black);
   font-weight: 400;
 }
 .header-top-section .header-top-wrapper .contact-list li i {
   margin-right: 5px;
 }
 .header-top-section .header-top-wrapper .contact-list li a {
-  color: var(--white);
+  color: var(--black);
   font-weight: 400;
 }
 .header-top-section .header-top-wrapper .social-wrapper {
   gap: 14px;
 }
-.header-top-section .header-top-wrapper .social-wrapper a {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.header-top-section .header-top-wrapper .social-wrapper a svg {
-  stroke: var(--white);
-  width: 8px;
-}
 .header-top-section .header-top-wrapper .social-wrapper a i {
-  font-size: 12px;
+  font-size: 20px;
+  transition: all 0.4s;
 }
 .header-top-section .header-top-wrapper .social-wrapper a .ani-arrow {
   transition: all 0.5s;
 }
-.header-top-section .header-top-wrapper .social-wrapper a:hover {
-  background: var(--p2-clr);
-  border-color: var(--p2-clr);
-}
 .header-top-section .header-top-wrapper .social-wrapper a:hover i {
-  color: var(--white);
-}
-.header-top-section .header-top-wrapper .social-wrapper a:hover svg {
-  stroke: var(--white);
+  color: var(--p1-clr);
 }
 .header-top-section .header-top-wrapper.style-2 {
   padding: 15px 0;
@@ -2088,6 +2070,15 @@ footer {
 @media (max-width: 1399px) {
   .header-1 .header-main .header-right .header-button {
     display: none;
+  }
+}
+.header-1.header-style2 {
+  padding-top: 0;
+}
+@media (min-width: 1400px) {
+  .header-1.header-style2 .mega-menu-wrapper {
+    border-radius: 0px 0px 40px 40px;
+    padding: 14px 30px 14px 30px;
   }
 }
 @media (max-width: 1199px) {
@@ -2664,6 +2655,24 @@ footer {
 .banner-section .hero-thumb1 img {
   width: 100%;
 }
+.banner-section.banner-style2 {
+  padding: 30px 0 60px;
+}
+.banner-section.banner-style2 .hero-thumb2 {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.banner-section.banner-style2 .hero-thumb2 .mimg {
+  width: 100%;
+}
+.banner-section.banner-style2 .hero-thumb2 .hero2-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: cir190 15s linear infinite;
+}
 @media (max-width: 1399px) {
   .banner-section {
     padding: 120px 0;
@@ -2718,6 +2727,11 @@ footer {
   }
 }
 
+@keyframes cir190 {
+  50% {
+    transform: rotate(60deg);
+  }
+}
 .marquee-wrapper {
   position: relative;
   overflow: hidden;

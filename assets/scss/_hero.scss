@@ -21,6 +21,27 @@
 			width: 100%;
 		}
 	}
+	&.banner-style2{
+		padding: 30px 0 60px;
+		.hero-content-version1{
+
+		}
+		.hero-thumb2{
+			width: 100%;
+			position: relative;
+			z-index: 1;
+			.mimg{
+				width: 100%;
+			}
+			.hero2-element{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				animation: cir190 15s linear infinite;
+			}
+		}
+	}
 	@include breakpoint(max-xxl) {
 		padding: 120px 0;
 		.hero-content-version1 {
@@ -69,6 +90,12 @@
 		.hero-thumb1 {
 			padding: 10px;
 		}
+	}
+}
+
+@keyframes cir190 {
+	50%{
+		transform: rotate(60deg);
 	}
 }
 //Banner Style
