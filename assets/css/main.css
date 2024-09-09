@@ -472,6 +472,34 @@ footer {
     transform: translateY(-15px);
   }
 }
+.about-thumb-inner2 {
+  max-width: 615px;
+  margin: 0 auto;
+}
+.about-thumb-inner2 img {
+  width: 100%;
+}
+.about-thumb-inner2 .thumb {
+  max-width: 499px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.about-thumb-inner2 .thumb img {
+  width: 100%;
+}
+.about-thumb-inner2 .about-shapes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  animation: rots 4s linear infinite;
+}
+
+@keyframes rots {
+  50% {
+    transform: rotate(7deg);
+  }
+}
 .faq-section {
   position: relative;
   z-index: 1;
