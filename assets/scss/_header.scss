@@ -128,7 +128,8 @@
 					position: absolute;
 					top: 100%;
 					inset-inline-start: 0;
-					min-width: 240px;
+					// min-width: 240px;
+					width: 200px;
 					background: $white;
 					z-index: 99999;
 					visibility: hidden;
@@ -153,7 +154,7 @@
 							font-size: 16px;
 							font-weight: 600;
 							color: $header-color;
-							padding: 0 25px;
+							padding: 0 18px;
 							padding-bottom: 11px;
 							padding-top: 11px;
 							width: 100%;
@@ -211,7 +212,8 @@
 					width: 500px;
 					padding: 30px 30px 10px 30px;
 					opacity: 0;
-					left: -250px;
+					// left: -250px;
+					left: 0px;
 					visibility: hidden;
 					padding: 20px 20px 20px 20px;
 
@@ -450,7 +452,7 @@
 	&.header-style2 {
 		padding-top: 0;
 		.mega-menu-wrapper {
-			@include breakpoint(xxl){
+			@include breakpoint(xxl) {
 				border-radius: 0px 0px 40px 40px;
 				padding: 14px 30px 14px 30px;
 			}
@@ -500,6 +502,11 @@
 }
 
 //>>>>> Offcanvas Start <<<<<//
+.fix-area {
+	@include breakpoint(xl) {
+		display: none !important;
+	}
+}
 .offcanvas__info {
 	background: $cmnbg none repeat scroll 0 0;
 	border-left: 2px solid $p2-clr;
@@ -627,20 +634,24 @@
 }
 
 .offcanvas__overlay {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	background: #151515;
-	z-index: 900;
-	top: 0;
-	opacity: 0;
-	visibility: hidden;
-	right: 0;
+	@include breakpoint(max-xl) {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		background: #151515;
+		z-index: 900;
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+		right: 0;
+	}
 }
 
 .offcanvas__overlay.overlay-open {
-	opacity: 0.8;
-	visibility: visible;
+	@include breakpoint(max-xl) {
+		opacity: 0.8;
+		visibility: visible;
+	}
 }
 
 @media (max-width: 450px) {

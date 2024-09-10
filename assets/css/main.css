@@ -1955,7 +1955,7 @@ footer {
   position: absolute;
   top: 100%;
   inset-inline-start: 0;
-  min-width: 240px;
+  width: 200px;
   background: var(--white);
   z-index: 99999;
   visibility: hidden;
@@ -1980,7 +1980,7 @@ footer {
   font-size: 16px;
   font-weight: 600;
   color: var(--header);
-  padding: 0 25px;
+  padding: 0 18px;
   padding-bottom: 11px;
   padding-top: 11px;
   width: 100%;
@@ -2026,7 +2026,7 @@ footer {
   width: 500px;
   padding: 30px 30px 10px 30px;
   opacity: 0;
-  left: -250px;
+  left: 0px;
   visibility: hidden;
   padding: 20px 20px 20px 20px;
 }
@@ -2296,6 +2296,12 @@ footer {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+@media (min-width: 1200px) {
+  .fix-area {
+    display: none !important;
+  }
+}
+
 .offcanvas__info {
   background: var(--cmnbg) none repeat scroll 0 0;
   border-left: 2px solid var(--p2-clr);
@@ -2408,21 +2414,25 @@ footer {
   color: var(--white);
 }
 
-.offcanvas__overlay {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: #151515;
-  z-index: 900;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-  right: 0;
+@media (max-width: 1199px) {
+  .offcanvas__overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #151515;
+    z-index: 900;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    right: 0;
+  }
 }
 
-.offcanvas__overlay.overlay-open {
-  opacity: 0.8;
-  visibility: visible;
+@media (max-width: 1199px) {
+  .offcanvas__overlay.overlay-open {
+    opacity: 0.8;
+    visibility: visible;
+  }
 }
 
 @media (max-width: 450px) {
@@ -2453,7 +2463,7 @@ footer {
 }
 
 .fix {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .ralt {
