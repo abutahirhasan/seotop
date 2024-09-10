@@ -1,48 +1,109 @@
 //about one
-.about-thumb{
-    animation: updown 2s linear infinite;
-    @include breakpoint(max-xxl){
-        max-width: 600px;
-        img{
-            width: 100%;
-        }
-    }
-}
-@keyframes updown {
-    50%{
-        transform: translateY(-15px);
-    }
-}
-//about two
-.about-thumb-inner2{
-	max-width: 615px;
-	margin: 0 auto;
-	img{
-		width: 100%;
-	}
-	.thumb{
-		max-width: 499px;
-		margin: 0 auto;
-		z-index: 1;
-		img{
+.about-thumb {
+	animation: updown 2s linear infinite;
+	@include breakpoint(max-xxl) {
+		max-width: 600px;
+		img {
 			width: 100%;
 		}
 	}
-	.about-shapes{
+}
+@keyframes updown {
+	50% {
+		transform: translateY(-15px);
+	}
+}
+//about two
+.about-thumb-inner2 {
+	max-width: 615px;
+	margin: 0 auto;
+	img {
+		width: 100%;
+	}
+	.thumb {
+		max-width: 499px;
+		margin: 0 auto;
+		z-index: 1;
+		img {
+			width: 100%;
+		}
+	}
+	.about-count {
+		padding: 11px 40px;
+		text-align: center;
+		border-radius: 20px;
+		border: 1px solid #ddd;
+		background: $white;
+		position: absolute;
+		top: 140px;
+		left: 0;
+		animation: updown 2s linear infinite;
+		h2,
+		span {
+			font-size: 48px;
+			font-weight: 500;
+			color: #0c0c0e;
+		}
+		p {
+			font-size: 18px;
+			color: #0c0c0e;
+		}
+	}
+	.about-shapes {
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		z-index: -1;
 		animation: rots 4s linear infinite;
 	}
+	@include breakpoint(max-md) {
+		.about-count {
+			padding: 10px 20px;
+			top: 180px;
+			left: 0;
+			h2,
+			span {
+				font-size: 30px;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+	}
 }
-
-@keyframes rots {
-	50%{
-		transform: rotate(7deg);
+//about content
+.about-content2 {
+	.about-listin-inner {
+		display: flex;
+		gap: 30px;
+		margin-bottom: 38px;
+		ul {
+			li {
+				i {
+					font-size: 18px;
+				}
+			}
+		}
+		@include breakpoint(max-sm) {
+			gap: 10px;
+			margin-bottom: 30px;
+			ul {
+				li {
+					font-size: 14px;
+					i {
+						font-size: 14px;
+					}
+				}
+			}
+		}
 	}
 }
 
+@keyframes rots {
+	50% {
+		transform: rotate(7deg);
+	}
+}
 
 //Counter
 .faq-section {
@@ -123,3 +184,22 @@
 	}
 }
 //Counter
+
+//about fillter ara
+.about-fill-area{
+	z-index: 1;
+	.global-effect1{
+		position: absolute;
+		right: 0;
+		top: 150px;
+		z-index: -1;
+	}
+	.global-effect2{
+		position: absolute;
+		left: 0;
+		bottom: 0px;
+		z-index: -1;
+	}
+}
+//about fillter ara
+

@@ -79,3 +79,18 @@
 		}
 	}
 }
+//service area2
+.service-areas{
+	.service-items{
+		padding: 40px 40px;
+		.icon{
+			margin-bottom: 40px;
+		}
+		@include breakpoint(max-xl){
+			padding: 24px 20px;
+			.icon{
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

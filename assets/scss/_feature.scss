@@ -30,7 +30,7 @@
 			.accordion-button {
 				font-size: 18px;
 				font-weight: 500;
-                line-height: 27px;
+				line-height: 27px;
 			}
 		}
 		.accordion-body {
@@ -54,3 +54,77 @@
 	box-shadow: none;
 }
 //Accordion
+
+//Ranking
+.ranking-content {
+	.rangking-tag {
+		display: grid;
+		gap: 19px;
+		.ranking-tag-item {
+			display: flex;
+			align-items: center;
+			gap: 18px;
+			padding: 20px 30px;
+			border-radius: 20px;
+			background: $white;
+			box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+			img {
+				width: 45px;
+				height: 45px;
+				object-fit: contain;
+			}
+		}
+		@include breakpoint(max-xl) {
+			gap: 16px;
+			.ranking-tag-item {
+				gap: 14px;
+				padding: 15px 20px;
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+}
+.ranking-thumbs {
+	position: relative;
+	.thumb {
+		max-width: 510px;
+		margin: 0 auto;
+		img {
+			width: 100%;
+		}
+	}
+	.element-badge1 {
+		position: absolute;
+		top: 240px;
+		left: 0;
+		animation: leftr 2s linear infinite;
+	}
+	.element-badge2 {
+		position: absolute;
+		right: 0;
+		bottom: 40px;
+		animation: updown 2s linear infinite;
+	}
+	@include breakpoint(max-sm) {
+		.element-badge1 {
+			top: 200px;
+			left: 14px;
+			max-width: 120px;
+		}
+		.element-badge2 {
+			bottom: 20px;
+			right: 14px;
+			width: 120px;
+			height: 120px;
+		}
+	}
+}
+@keyframes leftr {
+	50% {
+		transform: translateX(-10px);
+	}
+}
+//Ranking
