@@ -246,3 +246,49 @@
 	}
 }
 //Featurw
+
+//Breadcrumnd
+.breadcrumb-section {
+	background: rgb(235, 243, 246, 0.5);
+	z-index: 1;
+	.inner-element {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+}
+.cmn-bg2 {
+	background: rgb(235, 243, 246, 0.5);
+}
+.bread-content {
+	padding: 140px 0 155px;
+	ul {
+		li,
+		a {
+			font-size: 20px;
+			font-weight: 500;
+			color: $black;
+		}
+		i {
+			font-size: 16px;
+		}
+	}
+	@include breakpoint(max-xl) {
+		padding: 100px 0 130px;
+	}
+	@include breakpoint(max-md) {
+		padding: 80px 0 85px;
+		ul {
+			li,
+			a {
+				font-size: 16px;
+			}
+			i {
+				font-size: 14px;
+			}
+		}
+	}
+}
+//Breadcrumnd

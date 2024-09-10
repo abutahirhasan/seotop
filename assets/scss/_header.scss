@@ -499,6 +499,9 @@
 	.mega-menu-wrapper {
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	}
+	&.header-inner{
+		background: transparent;
+	}
 }
 
 //>>>>> Offcanvas Start <<<<<//
@@ -570,22 +573,24 @@
 
 				li {
 					font-size: 16px;
-					font-weight: 600;
+					font-weight: 500;
 					text-transform: capitalize;
+					line-height: 22px;
 
 					a {
 						color: $text-color;
 					}
 
 					&:not(:last-child) {
-						margin-bottom: 15px;
+						margin-bottom: 8px;
 					}
 
 					.offcanvas__contact-icon {
-						margin-right: 20px;
+						margin-right: 10px;
 
 						i {
-							color: $p2-clr;
+							color: $p1-clr;
+							font-size: 18px;
 						}
 					}
 				}
@@ -596,10 +601,18 @@
 			}
 
 			.header-button {
+				margin-top: 20px;
 				.theme-btn {
 					width: 100%;
 					padding: 16px 40px;
 					text-transform: capitalize !important;
+					background: $p1-clr !important;
+					border-radius: 100px;
+					overflow: hidden;
+					padding: 9px 16px 10px;
+					span,i{
+						color: $white !important;
+					}
 				}
 			}
 
