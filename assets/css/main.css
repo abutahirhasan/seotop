@@ -4233,6 +4233,13 @@ input.main-search-input::placeholder {
   }
 }
 
+.services-custom .service-items {
+  background: transparent;
+}
+.services-custom .service-items.active, .services-custom .service-items:hover {
+  background: #EBF3F6;
+}
+
 .testimonial-items {
   border-radius: 20px;
   background: #fff;

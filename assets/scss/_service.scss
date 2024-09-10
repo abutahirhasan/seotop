@@ -94,3 +94,13 @@
 		}
 	}
 }
+
+.services-custom{
+	.service-items{
+		background: transparent;
+		&.active,
+		&:hover{
+			background: #EBF3F6;
+		}
+	}
+}
