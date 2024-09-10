@@ -173,11 +173,11 @@
 						}
 						&:hover {
 							> a {
-								background: $p2-clr;
+								background: $p1-clr;
 								color: $white !important;
 
 								&::after {
-									color: $p2-clr;
+									color: $p1-clr;
 								}
 							}
 							> .submenu {
@@ -202,7 +202,7 @@
 								-ms-transform: translateY(-50%);
 								-o-transform: translateY(-50%);
 								transform: translateY(-50%);
-								color: $p2-clr;
+								color: $p1-clr;
 							}
 						}
 					}
@@ -319,9 +319,9 @@
 
 				&:hover {
 					> a {
-						color: $p2-clr;
+						color: $p1-clr;
 						&::after {
-							color: $p2-clr;
+							color: $p1-clr;
 						}
 					}
 					> .submenu {
