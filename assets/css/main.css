@@ -4345,7 +4345,9 @@ input.main-search-input::placeholder {
   background: #ffb525;
 }
 .pricing-items.pricing-items2.actives .common-btn:hover {
-  border: 1px solid #ddd;
+  background: var(--p1-clr) !important;
+  z-index: 1;
+  color: var(--white);
 }
 
 @keyframes cir360 {

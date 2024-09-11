@@ -77,7 +77,9 @@
 			background: #ffb525;
 			.common-btn {
 				&:hover {
-					border: 1px solid #ddd;
+					background: $p1-clr !important;
+					z-index: 1;
+					color: $white;
 				}
 			}
 		}
