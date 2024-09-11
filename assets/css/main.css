@@ -4353,6 +4353,10 @@ input.main-search-input::placeholder {
     transform: rotate(360deg);
   }
 }
+.pricing-gra {
+  background: #efefef;
+}
+
 .agency-inner {
   display: flex;
   flex-direction: column;
